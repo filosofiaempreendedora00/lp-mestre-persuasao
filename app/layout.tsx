@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import MetaPixel from '@/components/MetaPixel'
 
 export const metadata: Metadata = {
   title: 'Torne-se hoje um Mestre da Persuasão - Filosofia Empreendedora',
@@ -37,7 +38,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <MetaPixel />
+        {children}
+      </body>
     </html>
   )
 }
