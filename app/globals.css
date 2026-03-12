@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts ─── */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* ─── Design Tokens ─── */
+:root {
+  --gold: #c9953a;
+  --gold-light: #e0ae59;
+  --gold-dark: #a67928;
+  --teal: #278ea5;
+  --teal-dark: #1f4287;
+  --black: #0a0a0a;
+  --dark: #111111;
+  --dark-2: #1a1a1a;
+  --text-light: #e5e5e5;
+  --text-muted: #888888;
+}
+
+/* ─── Base ─── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-sans;
+    color: #222222;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    line-height: 1.2;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { color: var(--teal-dark); text-decoration: underline; }
+}
+
+/* ─── Components ─── */
+@layer components {
+
+  /* Container */
+  .container-lp {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  /* ── Botão CTA teal (conversão) ── */
+  .btn-cta {
+    @apply inline-flex items-center justify-center font-serif text-white;
+    background-color: var(--teal);
+    padding: 17px 40px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .btn-cta:hover {
+    background-color: var(--teal-dark);
+    text-decoration: none;
+    color: #fff;
+    transform: translateY(-1px);
+  }
+  .btn-cta:active { transform: translateY(0); }
+
+  /* Botão CTA grande */
+  .btn-cta-lg {
+    @apply btn-cta;
+    font-size: 1.25rem;
+    padding: 20px 48px;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  /* Botão WhatsApp */
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center font-serif text-white gap-3;
+    background-color: #25d366;
+    padding: 17px 40px;
+    border-radius: 30px;
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  .btn-whatsapp:hover {
+    background-color: #1da851;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* Seções */
+  .section    { padding-block: 4rem; }
+  .section-lg { padding-block: 5rem; }
+
+  /* Badge oferta */
+  .badge-offer {
+    @apply inline-block font-serif text-sm uppercase tracking-widest;
+    background-color: rgba(201, 149, 58, 0.15);
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 4px 16px;
+  }
+
+  /* Divisor dourado */
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin-inline: auto;
+    margin-block: 1.5rem;
+  }
+  .divider-left {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-block: 1.5rem;
+  }
+
+  /* Check item */
+  .check-item { @apply flex items-start gap-3; }
+  .check-icon { flex-shrink: 0; width: 22px; height: 22px; color: var(--gold); margin-top: 2px; }
+
+  /* FAQ */
+  details.faq-item { border-bottom: 1px solid #2a2a2a; }
+  details.faq-item summary {
+    @apply font-serif cursor-pointer py-4 pr-8;
+    font-size: 1.05rem;
+    list-style: none;
+    position: relative;
+    color: #e5e5e5;
+  }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--gold);
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 1;
+  }
+  details.faq-item[open] summary::after { content: '−'; }
+  details.faq-item .faq-answer { @apply pb-4; color: #888888; }
+
+  /* Testimonial card */
+  .testimonial-card {
+    @apply rounded-xl p-6;
+    background-color: #161616;
+    border: 1px solid #2a2a2a;
+    border-left: 3px solid var(--gold);
+  }
+
+  /* Módulo item */
+  .module-number {
+    @apply font-serif text-black flex-shrink-0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+
+  /* Highlights */
+  .highlight      { color: var(--teal); }
+  .highlight-red  { color: #e53e3e; }
+  .text-gold      { color: var(--gold); }
+  .border-gold    { border-color: var(--gold); }
+
+  /* Pricing card */
+  .pricing-card {
+    @apply rounded-2xl shadow-2xl overflow-hidden;
+    background-color: #161616;
+    border: 1px solid var(--gold);
+  }
+  .pricing-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+    border-bottom: 2px solid var(--gold);
+    @apply text-white text-center py-6 px-4;
+  }
+
+  /* Step number */
+  .step-number {
+    @apply font-serif text-black flex-shrink-0;
+    width: 48px;
+    height: 48px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  /* Quote block */
+  .quote-block { @apply relative text-center; }
+  .quote-block blockquote {
+    @apply font-serif text-2xl md:text-3xl;
+    font-style: italic;
+    color: #e5e5e5;
+    line-height: 1.4;
+  }
+
+  /* Moldura dourada do vídeo */
+  .video-gold-frame {
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    box-shadow: 0 0 30px rgba(201, 149, 58, 0.25), 0 0 0 1px rgba(201, 149, 58, 0.1);
+    overflow: hidden;
+  }
+}
+
+/* ─── Utilities ─── */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+/* ══════════════════════════════════════════
+   BACKGROUNDS DAS SEÇÕES
+══════════════════════════════════════════ */
+
+/* Hero — preto puro */
+.hero-section {
+  background-color: #000000;
+  color: #fff;
+}
+
+/* Seções claras (texto escuro) */
+.bg-section-light {
+  background-color: #ffffff;
+}
+
+/* Seções alternadas (muito ligeiramente acinzentado) */
+.bg-section-alt {
+  background-color: #f7f7f7;
+}
+
+/* Seções escuras */
+.bg-section-dark {
+  background-color: #0e0e0e;
+  color: #fff;
+}
+
+.bg-section-dark-2 {
+  background-color: #141414;
+  color: #fff;
+}
+
+/* Pricing */
+.bg-pricing {
+  background-color: #0a0a0a;
+}
+
+/* Garantia */
+.guarantee-section {
+  background-color: #0e0e0e;
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════
+   ANIMAÇÕES
+══════════════════════════════════════════ */
+
+/* Pincelada animada (SectionReality) */
+.word-brush-gold,
+.word-brush-red {
+  position: relative;
+  display: inline-block;
+}
+
+.word-brush-gold::after,
+.word-brush-red::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: -12px;
+  height: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* pincelada dourada — persuasão (grossa, orgânica, com falhas) */
+.word-brush-gold::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 28'%3E%3Cpath d='M3,18 C18,9 42,24 75,15 C108,7 140,22 168,14 C180,10 190,17 199,14' stroke='%23c9953a' stroke-width='13' fill='none' stroke-linecap='round' opacity='0.55'/%3E%3Cpath d='M1,17 C22,12 55,20 92,14 C128,8 162,18 196,13' stroke='%23c9953a' stroke-width='5' fill='none' stroke-linecap='round' opacity='0.3'/%3E%3Cpath d='M40,20 C60,16 85,22 115,17' stroke='%23c9953a' stroke-width='7' fill='none' stroke-linecap='round' opacity='0.2'/%3E%3C/svg%3E");
+  transition-delay: 0.1s;
+}
+
+/* pincelada vermelha — manipulação (grossa, orgânica, com falhas) */
+.word-brush-red::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 28'%3E%3Cpath d='M2,18 C20,9 48,24 80,15 C112,6 145,22 172,13 C182,10 192,16 199,14' stroke='%23e53e3e' stroke-width='13' fill='none' stroke-linecap='round' opacity='0.5'/%3E%3Cpath d='M4,16 C28,12 60,20 95,14 C130,8 165,17 197,13' stroke='%23e53e3e' stroke-width='5' fill='none' stroke-linecap='round' opacity='0.28'/%3E%3Cpath d='M50,20 C72,15 100,21 128,17' stroke='%23e53e3e' stroke-width='7' fill='none' stroke-linecap='round' opacity='0.18'/%3E%3C/svg%3E");
+  transition-delay: 0.35s;
+}
+.word-brush-red { color: #888; }
+
+.word-brush-gold.word-line-visible::after,
+.word-brush-red.word-line-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide-in dos cards de benefício */
+.benefit-card {
+  opacity: 0;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.benefit-from-left  { transform: translateX(-60px); }
+.benefit-from-right { transform: translateX(60px); }
+.benefit-card.benefit-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes btn-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(39, 142, 165, 0.5); }
+  50%       { box-shadow: 0 0 0 14px rgba(39, 142, 165, 0); }
+}
+.btn-cta-pulse { animation: btn-pulse 2.5s ease-in-out infinite; }
+
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 149, 58, 0.4); }
+  50%       { box-shadow: 0 0 0 14px rgba(201, 149, 58, 0); }
+}
+.btn-gold-pulse { animation: gold-pulse 2.5s ease-in-out infinite; }
+
+/* ──────────────────────────────────────── */
+/* Mobile                                   */
+/* ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  .btn-cta    { font-size: 1rem; padding: 15px 20px; width: 100%; text-align: center; }
+  .btn-cta-lg { font-size: 1.05rem; padding: 16px 20px; }
+  .section    { padding-block: 3rem; }
+  .section-lg { padding-block: 3.5rem; }
+}
