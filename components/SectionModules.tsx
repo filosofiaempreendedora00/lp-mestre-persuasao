@@ -64,7 +64,7 @@ export default function SectionModules() {
     <section className="section-lg bg-section-dark">
       <div className="container-lp max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white leading-tight">
+          <h2 className="font-serif text-white leading-tight" style={{ fontSize: 'clamp(2rem, 6vw, 3.2rem)' }}>
             O que você terá acesso no{' '}
             <span className="text-gold">MESTRE DA PERSUASÃO</span>:
           </h2>
@@ -113,11 +113,7 @@ export default function SectionModules() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a href="https://pay.kiwify.com.br/cvyDT6p" className="btn-cta" target="_blank" rel="noopener noreferrer">
-            QUERO ME TORNAR UM MESTRE DA PERSUASÃO
-          </a>
-        </div>
+
       </div>
     </section>
   )

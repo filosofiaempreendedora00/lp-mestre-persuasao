@@ -40,7 +40,7 @@ export default function SectionCourse() {
       <div className="container-lp">
         {/* Cabeçalho centralizado */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white leading-tight mb-4">
+          <h2 className="font-serif text-white leading-tight mb-4" style={{ fontSize: 'clamp(2rem, 6vw, 3.2rem)' }}>
             O QUE É O{' '}
             <span className="text-gold">MESTRE DA PERSUASÃO</span>?
           </h2>

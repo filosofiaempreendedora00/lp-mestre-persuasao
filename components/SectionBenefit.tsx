@@ -10,7 +10,7 @@ const items = [
   },
   {
     content: (
-      <>Conhecimentos profundos que já <strong>venceram</strong> o tempo…</>
+      <>Acesse técnicas profundas que já <strong>venceram</strong> o tempo…</>
     ),
   },
   {
@@ -72,16 +72,22 @@ export default function SectionBenefit() {
               className={`benefit-card ${i % 2 === 0 ? 'benefit-from-left' : 'benefit-from-right'}`}
             >
               <div
-                className="rounded-2xl px-8 py-6 text-white text-xl text-center"
+                className="rounded-2xl px-6 py-5 text-white text-xl flex items-center gap-4"
                 style={{
                   border: '1px solid rgba(201,149,58,0.35)',
                   backgroundColor: 'rgba(255,255,255,0.03)',
                 }}
               >
-                <p>{item.content}</p>
-                {item.footnote && (
-                  <p className="text-sm text-gray-500 mt-2 italic">{item.footnote}</p>
-                )}
+                <svg viewBox="0 0 20 20" fill="none" className="flex-shrink-0 w-5 h-5" aria-hidden="true">
+                  <circle cx="10" cy="10" r="9" stroke="#c9953a" strokeWidth="1.4" strokeOpacity="0.5"/>
+                  <path d="M6 10.5l2.8 2.8L14 7.5" stroke="#c9953a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <div>
+                  <p>{item.content}</p>
+                  {item.footnote && (
+                    <p className="text-sm text-gray-500 mt-1 italic">{item.footnote}</p>
+                  )}
+                </div>
               </div>
             </div>
           ))}

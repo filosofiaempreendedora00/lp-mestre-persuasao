@@ -26,12 +26,13 @@ export default function SectionReality() {
   return (
     <section className="section" style={{ backgroundColor: '#ffffff' }}>
       <div className="container-lp max-w-3xl mx-auto text-center">
-        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl leading-tight mb-3" style={{ color: '#1a1a1a' }}>
-          VOCÊ NÃO ACHA QUE JÁ PASSOU DA HORA DE ACEITAR A REALIDADE COMO ELA
-          É??
+        <h2 className="font-serif leading-tight mb-3" style={{ color: '#1a1a1a', fontSize: 'clamp(2rem, 6vw, 3.5rem)' }}>
+          VOCÊ NÃO ACHA QUE JÁ{' '}
+          <span style={{ color: '#c9953a' }}>PASSOU DA HORA</span>{' '}
+          DE ACEITAR A REALIDADE COMO ELA É??
         </h2>
-        <p className="text-lg mb-6 italic" style={{ color: '#888' }}>
-          (E não como você GOSTARIA que ela fosse)
+        <p className="mb-6 italic" style={{ color: '#aaa', fontSize: '0.95rem' }}>
+          (E não como você GOSTARIA que ela fosse...)
         </p>
         <div className="divider" />
 
@@ -40,9 +41,9 @@ export default function SectionReality() {
           style={{ backgroundColor: '#f7f5f0', border: '1px solid #e0d8c8', color: '#222' }}
         >
           <p>
-            Aceite, de uma vez por todas: o mundo não é dos mais{' '}
-            <strong style={{ color: '#1a1a1a' }}>ESFORÇADOS</strong> — e sim dos mais
-            inteligentes e <strong className="text-gold">PERSUASIVOS</strong>...
+            Esforço sem persuasão não serve de nada. Quem cresce mais rápido
+            não é o mais qualificado — é aquele que sabe{' '}
+            <strong className="text-gold">comunicar o próprio valor</strong>.
           </p>
           <p>
             E, pelo amor de Deus: não vai cair no erro idiota de confundir{' '}

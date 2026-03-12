@@ -9,15 +9,15 @@ import SectionPricing from '@/components/SectionPricing'
 import SectionGuarantee from '@/components/SectionGuarantee'
 import SectionTestimonials from '@/components/SectionTestimonials'
 import SectionQuote from '@/components/SectionQuote'
-import SectionHowItWorks from '@/components/SectionHowItWorks'
-import SectionGuaranteeDetails from '@/components/SectionGuaranteeDetails'
 import SectionFaq from '@/components/SectionFaq'
 import SectionContact from '@/components/SectionContact'
 import Footer from '@/components/Footer'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 export default function Home() {
   return (
     <main>
+      <ScrollAnimations />
       {/* 1. Hero — Headline + Vídeo + CTA */}
       <SectionHero />
 
@@ -48,29 +48,15 @@ export default function Home() {
       {/* 10. Depoimentos / Prova social */}
       <SectionTestimonials />
 
-      {/* 11. Citação — Benjamin Franklin */}
-      <SectionQuote
-        quote="Investir em conhecimento sempre rende os melhores juros ($$$)."
-        author="Benjamin Franklin"
-        ctaText="QUERO OS MELHORE($) JURO($)"
-      />
+      {/* 11. FAQ */}
+      <SectionFaq />
 
-      {/* 12. Como funciona — 4 passos */}
-      <SectionHowItWorks />
-
-      {/* 13. Citação — Martin Luther King */}
+      {/* 12. Citação — Martin Luther King */}
       <SectionQuote
         quote="O que me preocupa não é o grito dos maus, mas o silêncio dos bons"
         author="Martin Luther King"
-        ctaText="QUERO SER PERSUASIVO"
-        dark
+        ctaText="APRENDER PERSUASÃO AGORA"
       />
-
-      {/* 14. Detalhes da garantia incondicional */}
-      <SectionGuaranteeDetails />
-
-      {/* 15. FAQ */}
-      <SectionFaq />
 
       {/* 16. Contato WhatsApp */}
       <SectionContact />
