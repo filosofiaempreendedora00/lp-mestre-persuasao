@@ -12,7 +12,7 @@ export default function SectionPain() {
       <div className="container-lp">
 
         {/* Headline centralizada */}
-        <div className="text-center anim-up" style={{ marginBottom: '3rem' }}>
+        <div className="text-center" style={{ marginBottom: '3rem' }}>
           <span
             className="badge-offer"
             style={{ marginBottom: '1.25rem', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
@@ -40,7 +40,7 @@ export default function SectionPain() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Coluna esquerda — imagem com moldura e badge */}
-          <div className="anim-left" style={{ position: 'relative' }}>
+          <div style={{ position: 'relative' }}>
 
             {/* Moldura dourada na imagem */}
             <div style={{
@@ -63,7 +63,7 @@ export default function SectionPain() {
           </div>
 
           {/* Coluna direita — texto estruturado */}
-          <div className="anim-right">
+          <div>
 
             <p
               className="leading-relaxed"
