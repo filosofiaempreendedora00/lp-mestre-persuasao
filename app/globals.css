@@ -417,6 +417,36 @@
 }
 
 /* ──────────────────────────────────────── */
+/* Course section — pillar icon animations  */
+/* ──────────────────────────────────────── */
+@keyframes pillar-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-9px); }
+}
+@keyframes pillar-heartbeat {
+  0%, 55%, 100% { transform: scale(1); }
+  20%           { transform: scale(1.22); }
+  38%           { transform: scale(1.04); }
+}
+@keyframes pillar-ring-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pillar-glow {
+  0%, 100% { opacity: 0.35; filter: drop-shadow(0 0 3px rgba(201,149,58,0.25)); }
+  50%      { opacity: 1;    filter: drop-shadow(0 0 14px rgba(201,149,58,0.75)); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .icon-float     { animation: pillar-float     3.6s ease-in-out infinite; }
+  .icon-heartbeat { animation: pillar-heartbeat 1.9s ease-in-out infinite; }
+  .icon-glow      { animation: pillar-glow      2.6s ease-in-out infinite; }
+  .icon-ring      {
+    animation: pillar-ring-spin 10s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+}
+
+/* ──────────────────────────────────────── */
 /* Mobile                                   */
 /* ──────────────────────────────────────── */
 @media (max-width: 640px) {
