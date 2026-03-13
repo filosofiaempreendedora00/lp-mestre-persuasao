@@ -8,8 +8,9 @@ const included = [
   'Garantia incondicional de 7 dias',
 ]
 
+import ClientDate from '@/components/ClientDate'
+
 export default function SectionPricing() {
-  const today = new Date().toLocaleDateString('pt-BR')
 
   return (
     <section className="section-lg bg-pricing" id="oferta">
@@ -51,7 +52,7 @@ export default function SectionPricing() {
             </h2>
             <div className="inline-block mt-3 px-4 py-1 rounded-full text-sm font-semibold"
               style={{ background: 'rgba(201,149,58,0.15)', border: '1px solid rgba(201,149,58,0.4)', color: '#e0b96a' }}>
-              Economize R$310,00 — oferta válida hoje, {today}
+              Economize R$310,00 — oferta válida hoje, <ClientDate />
             </div>
           </div>
 

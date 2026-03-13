@@ -183,10 +183,10 @@ export default function SectionGuarantee() {
         </div>
 
         {/* CTA */}
-        <div className="flex justify-center mt-10">
+        <div style={{ maxWidth: 480, margin: '2.5rem auto 0' }}>
           <a
             href="https://pay.kiwify.com.br/cvyDT6p"
-            className="btn-cta-lg btn-cta-pulse"
+            className="btn-gold-3d btn-gold-pulse font-serif"
             target="_blank"
             rel="noopener noreferrer"
           >
