@@ -30,12 +30,12 @@ export default function SectionGuarantee() {
         <div className="flex justify-center mb-8">
           <div
             style={{
-              width: 120,
-              height: 120,
+              width: 84,
+              height: 84,
               borderRadius: '50%',
               background: 'linear-gradient(145deg, #1e2e20, #0d1a10)',
               border: '2px solid rgba(201,149,58,0.5)',
-              boxShadow: '0 0 0 6px rgba(201,149,58,0.08), 0 0 40px rgba(201,149,58,0.18)',
+              boxShadow: '0 0 0 5px rgba(201,149,58,0.07), 0 0 30px rgba(201,149,58,0.15)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -47,7 +47,7 @@ export default function SectionGuarantee() {
               aria-hidden="true"
               style={{
                 position: 'absolute',
-                inset: 8,
+                inset: 6,
                 borderRadius: '50%',
                 border: '1px solid rgba(201,149,58,0.25)',
               }}
@@ -56,7 +56,7 @@ export default function SectionGuarantee() {
             <svg
               viewBox="0 0 64 64"
               fill="none"
-              className="w-14 h-14"
+              className="w-10 h-10"
               aria-hidden="true"
             >
               {/* Fita superior */}
@@ -137,7 +137,7 @@ export default function SectionGuarantee() {
             <strong style={{ color: '#c9953a', fontSize: '1.1em' }}>
               o seu risco é ZERO
             </strong>
-            . Você não tem nada a perder.
+            . Você não tem absolutamente nada a perder.
           </p>
         </div>
 
@@ -180,6 +180,18 @@ export default function SectionGuarantee() {
               <span>{item.label}</span>
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="flex justify-center mt-10">
+          <a
+            href="https://pay.kiwify.com.br/cvyDT6p"
+            className="btn-cta-lg btn-cta-pulse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            COMEÇAR AGORA
+          </a>
         </div>
 
       </div>

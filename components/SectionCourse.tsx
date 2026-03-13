@@ -63,12 +63,17 @@ function TempleIcon() {
 /* ─── Ícones dos pilares ─── */
 const EthosIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" className="w-11 h-11 icon-float" aria-hidden="true">
-    {/* Coroa / Laurel wreath */}
-    <path d="M12 32c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#c9953a" strokeWidth="2.2" strokeLinecap="round" />
-    <circle cx="24" cy="16" r="6" stroke="#c9953a" strokeWidth="2.2" />
-    {/* Galhos de louros */}
-    <path d="M8 28c2-3 5-4 7-2M40 28c-2-3-5-4-7-2" stroke="#c9953a" strokeWidth="1.8" strokeLinecap="round" />
-    <path d="M6 34c1-2 3-3 5-2M42 34c-1-2-3-3-5-2" stroke="#c9953a" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
+    {/* Escudo */}
+    <path
+      d="M24 6L10 12v10c0 9.4 6.2 18.2 14 21 7.8-2.8 14-11.6 14-21V12L24 6z"
+      stroke="#c9953a" strokeWidth="2.2" strokeLinejoin="round"
+      fill="rgba(201,149,58,0.07)"
+    />
+    {/* Estrela dentro do escudo */}
+    <path
+      d="M24 17l1.6 4.9H31l-4.2 3 1.6 4.9L24 27l-4.4 2.8 1.6-4.9-4.2-3h5.4L24 17z"
+      fill="#c9953a" opacity="0.85"
+    />
   </svg>
 )
 
@@ -85,15 +90,19 @@ const PathosIcon = () => (
 )
 
 const LogosIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" className="w-11 h-11 icon-glow" aria-hidden="true">
-    {/* Escala da justiça / balança */}
-    <line x1="24" y1="8" x2="24" y2="38" stroke="#c9953a" strokeWidth="2" strokeLinecap="round" />
-    <line x1="14" y1="38" x2="34" y2="38" stroke="#c9953a" strokeWidth="2" strokeLinecap="round" />
-    <line x1="24" y1="14" x2="10" y2="22" stroke="#c9953a" strokeWidth="1.8" strokeLinecap="round" />
-    <line x1="24" y1="14" x2="38" y2="22" stroke="#c9953a" strokeWidth="1.8" strokeLinecap="round" />
-    <path d="M7 22c0 3.314 1.343 6 3 6s3-2.686 3-6H7z" stroke="#c9953a" strokeWidth="1.5" fill="rgba(201,149,58,0.1)" />
-    <path d="M35 22c0 3.314 1.343 6 3 6s3-2.686 3-6h-6z" stroke="#c9953a" strokeWidth="1.5" fill="rgba(201,149,58,0.1)" />
-    <circle cx="24" cy="13" r="2" fill="#c9953a" opacity="0.8" />
+  <svg viewBox="0 0 48 48" fill="none" className="w-11 h-11 icon-float" aria-hidden="true"
+    style={{ animationDelay: '1.4s' }}>
+    {/* Lâmpada — insight / lógica */}
+    <path
+      d="M24 9c-6.1 0-11 4.9-11 11 0 4.1 2.2 7.7 5.5 9.7V33h11v-3.3C32.8 27.7 35 24.1 35 20c0-6.1-4.9-11-11-11z"
+      stroke="#c9953a" strokeWidth="2.2" strokeLinejoin="round"
+      fill="rgba(201,149,58,0.07)"
+    />
+    {/* Base da lâmpada */}
+    <line x1="19" y1="36" x2="29" y2="36" stroke="#c9953a" strokeWidth="2"   strokeLinecap="round" />
+    <line x1="20" y1="39" x2="28" y2="39" stroke="#c9953a" strokeWidth="1.8" strokeLinecap="round" />
+    {/* Filamento interno */}
+    <path d="M21 20c0-1.7 1.3-3 3-3s3 1.3 3 3" stroke="#c9953a" strokeWidth="1.4" strokeLinecap="round" opacity="0.6" />
   </svg>
 )
 
@@ -253,20 +262,10 @@ export default function SectionCourse() {
                 </div>
               </div>
 
-              {/* Letra grega */}
-              <span style={{
-                fontFamily: 'serif',
-                fontSize: '0.7rem',
-                letterSpacing: '0.22em',
-                color: 'rgba(201,149,58,0.55)',
-                textTransform: 'uppercase',
-              }}>
-                {p.greek}
-              </span>
-
-              {/* Label latino */}
+              {/* Label latino + letra grega entre parênteses */}
               <span className="font-serif text-gold" style={{ fontSize: '0.8rem', letterSpacing: '0.2em', opacity: 0.9 }}>
-                {p.label}
+                {p.label}{' '}
+                <span style={{ fontSize: '0.65rem', letterSpacing: '0.15em', opacity: 0.6 }}>({p.greek})</span>
               </span>
 
               {/* Divisor mini */}

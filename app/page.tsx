@@ -42,11 +42,11 @@ export default function Home() {
       {/* 8. Oferta / Preço */}
       <SectionPricing />
 
-      {/* 9. Garantia resumida */}
-      <SectionGuarantee />
-
-      {/* 10. Depoimentos / Prova social */}
+      {/* 9. Depoimentos / Prova social */}
       <SectionTestimonials />
+
+      {/* 10. Garantia */}
+      <SectionGuarantee />
 
       {/* 11. FAQ */}
       <SectionFaq />
