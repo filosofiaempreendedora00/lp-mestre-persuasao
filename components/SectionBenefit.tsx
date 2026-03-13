@@ -60,7 +60,7 @@ export default function SectionBenefit() {
 
         {/* Título centralizado */}
         <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-gold text-center leading-tight mb-14">
-          CHEGA DESSA M&amp;RD4.
+          CHEGA DESSA M&amp;RD4!!
         </h2>
 
         {/* Cards individuais */}

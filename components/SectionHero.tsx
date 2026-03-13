@@ -62,9 +62,9 @@ export default function SectionHero() {
         <div style={{ marginBottom: '1.25rem' }}>
           <h1
             className="font-serif text-white leading-tight"
-            style={{ fontSize: 'clamp(1.75rem, 5.5vw, 3rem)' }}
+            style={{ fontSize: 'clamp(1.35rem, 3.8vw, 2.1rem)' }}
           >
-            CANSOU DE VER &ldquo;PROFISSIONAIS&rdquo; COM NEM{' '}
+            CANSOU DE VER COLEGAS DE PROFISSÃO COM NEM{' '}
             <span style={{ color: '#c9953a' }}>METADE DO SEU CONHECIMENTO</span>{' '}
             GANHANDO{' '}
             <span style={{ color: '#c9953a' }}>MAIS DINHEIRO</span>{' '}
@@ -92,11 +92,19 @@ export default function SectionHero() {
         {/* Vídeo com moldura premium */}
         <div
           style={{
-            borderRadius: 12,
-            overflow: 'hidden',
-            boxShadow: '0 0 0 1px rgba(201,149,58,0.35), 0 0 50px rgba(201,149,58,0.12), 0 24px 48px rgba(0,0,0,0.6)',
+            padding: 2,
+            borderRadius: 14,
+            background: 'linear-gradient(135deg, #c9953a 0%, #f0c96b 40%, #8a5e1a 70%, #c9953a 100%)',
+            boxShadow: '0 0 32px rgba(201,149,58,0.35), 0 0 80px rgba(201,149,58,0.12), 0 28px 56px rgba(0,0,0,0.7)',
           }}
         >
+          <div
+            style={{
+              borderRadius: 12,
+              overflow: 'hidden',
+              background: '#000',
+            }}
+          >
           <div className="relative w-full bg-black" style={{ paddingBottom: '56.25%' }}>
             <iframe
               className="absolute inset-0 w-full h-full"
@@ -106,6 +114,7 @@ export default function SectionHero() {
               allowFullScreen
               loading="lazy"
             />
+          </div>
           </div>
         </div>
 
