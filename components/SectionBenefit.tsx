@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import GreekBackdrop from './GreekBackdrop'
 
 const items = [
   {
@@ -55,11 +56,13 @@ export default function SectionBenefit() {
   }, [])
 
   return (
-    <section className="section bg-section-dark-2">
+    <section className="section-lg greek-scene">
+      <GreekBackdrop />
+
       <div className="container-lp max-w-3xl mx-auto">
 
         {/* Título centralizado */}
-        <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-gold text-center leading-tight mb-14">
+        <h2 className="greek-title font-serif text-4xl sm:text-5xl md:text-6xl text-gold text-center leading-tight mb-14">
           CHEGA DESSA M&amp;RD4!!
         </h2>
 
@@ -71,13 +74,7 @@ export default function SectionBenefit() {
               ref={(el) => { cardRefs.current[i] = el }}
               className={`benefit-card ${i % 2 === 0 ? 'benefit-from-left' : 'benefit-from-right'}`}
             >
-              <div
-                className="rounded-2xl px-6 py-5 text-white text-xl flex items-center gap-4"
-                style={{
-                  border: '1px solid rgba(201,149,58,0.35)',
-                  backgroundColor: 'rgba(255,255,255,0.03)',
-                }}
-              >
+              <div className="benefit-glass rounded-2xl px-6 py-5 text-white text-xl flex items-center gap-4">
                 <svg viewBox="0 0 20 20" fill="none" className="flex-shrink-0 w-5 h-5" aria-hidden="true">
                   <circle cx="10" cy="10" r="9" stroke="#c9953a" strokeWidth="1.4" strokeOpacity="0.5"/>
                   <path d="M6 10.5l2.8 2.8L14 7.5" stroke="#c9953a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -85,7 +82,7 @@ export default function SectionBenefit() {
                 <div>
                   <p>{item.content}</p>
                   {item.footnote && (
-                    <p className="text-sm text-gray-500 mt-1 italic">{item.footnote}</p>
+                    <p className="text-sm mt-1 italic" style={{ color: '#9a8f7d' }}>{item.footnote}</p>
                   )}
                 </div>
               </div>
